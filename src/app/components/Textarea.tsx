@@ -42,9 +42,7 @@ export const TextArea = () => {
         if (res.data.state !== "PENDING") {
           clearInterval(interval);
           if (res.status === 200) {
-            dispatch(
-              setImageSrc(`http://192.168.0.103:5000/result/${task_id}`)
-            );
+            dispatch(setImageSrc(`data:image/png;base64,${res.data.image}`));
             dispatch(setImageLoading(false));
           } else {
             setError("Task failed or no result found.");
