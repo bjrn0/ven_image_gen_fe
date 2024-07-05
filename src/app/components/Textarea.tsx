@@ -9,6 +9,7 @@ import axios from "axios";
 
 export const TextArea = () => {
   const selectedPrompt = useAppSelector((state) => state.user.selectedPrompt);
+  const isLoading = useAppSelector((state) => state.user.isImageLoading);
   const dispatch = useAppDispatch();
   const [taskId, setTaskId] = useState<number>(0);
   const [error, setError] = useState<string>("");
@@ -16,6 +17,7 @@ export const TextArea = () => {
   const generateImageHandler = async (e: any) => {
     e.preventDefault();
     if (selectedPrompt === "") return;
+    if (isLoading) return;
     try {
       const res = await axios.post("http://192.168.0.103:5000/enqueue", {
         data: {
