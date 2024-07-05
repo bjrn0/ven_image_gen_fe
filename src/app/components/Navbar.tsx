@@ -87,7 +87,7 @@ export const Navbar = () => {
                     <MenuButton className="relative flex rounded-full bg-gray-800 text-sm">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      <div className="h-8 w-8 rounded-full bg-orange-400 border border-gray-400" />
+                      <div className="h-8 w-8 rounded-full bg-gray-200 border border-gray-300" />
                     </MenuButton>
                   </div>
                   <MenuItems

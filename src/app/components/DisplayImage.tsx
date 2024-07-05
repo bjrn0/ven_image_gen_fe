@@ -12,7 +12,7 @@ export const DisplayImage = () => {
     <>
       <div className="flex flex-col w-full">
         {imageSrc === "" && isLoading && (
-          <div className="h-3/4 p-12 flex flex-row justify-center">
+          <div className="h-3/4 p-4 flex flex-row justify-center ">
             <div
               role="status"
               className="flex items-center justify-center w-4/6 h-full bg-gray-100 rounded-lg"
@@ -37,7 +37,7 @@ export const DisplayImage = () => {
           </div>
         )}
         {imageSrc === "" && !isLoading && (
-          <div className="h-3/4 p-12 flex flex-row justify-center">
+          <div className="h-3/4 p-4 flex flex-row justify-center">
             <div
               role="status"
               className="flex items-center justify-center w-4/6 h-full bg-gray-100 rounded-lg"
@@ -56,14 +56,13 @@ export const DisplayImage = () => {
           </div>
         )}
         {!isLoading && imageSrc !== "" && (
-          <div className="h-3/4 p-12 flex flex-row justify-center">
+          <div className="h-3/4 py-4 flex flex-row justify-center">
             <div
               role="status"
-              className="flex items-center relative justify-center w-4/6 h-full bg-gray-100 rounded-lg"
+              className="relative rounded-lg overflow-hidden flex items-center justify-center w-4/6 h-full bg-gray-100"
             >
-              <Image
-                className="rounded-md"
-                fill
+              <img
+                className="h-full absolute top-0 w-full"
                 src={imageSrc}
                 alt="generated image"
               />
