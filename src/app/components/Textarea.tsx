@@ -19,7 +19,7 @@ export const TextArea = () => {
     if (selectedPrompt === "") return;
     if (isLoading) return;
     try {
-      const res = await axios.post("http://192.168.0.103:5000/enqueue", {
+      const res = await axios.post("http://192.168.8.77:5000/enqueue", {
         data: {
           prompt: selectedPrompt,
           userId: Date.now(),

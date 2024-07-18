@@ -2,7 +2,7 @@
 
 import { prompts } from "../data/prompts";
 import Image from "next/image";
-import { useAppDispatch, useAppSelector } from "../lib/hooks";
+import { useAppDispatch } from "../lib/hooks";
 import { setPromptText } from "../lib/slices/userSlice";
 import { useState } from "react";
 
