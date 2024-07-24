@@ -38,7 +38,7 @@ export const TextArea = () => {
     const interval = setInterval(async () => {
       try {
         const res = await axios.get(
-          `http://192.168.0.103:5000/result/${task_id}`
+          `http://192.168.8.77:5000/result/${task_id}`
         );
         console.log(res);
         if (res.data.state !== "PENDING") {
