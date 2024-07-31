@@ -19,7 +19,7 @@ export const TextArea = () => {
     if (selectedPrompt === "") return;
     if (isLoading) return;
     try {
-      const res = await axios.post("http://192.168.78.190:5000/enqueue", {
+      const res = await axios.post("https://192.168.78.190:5000/enqueue", {
         data: {
           prompt: selectedPrompt,
           userId: Date.now(),
@@ -38,7 +38,7 @@ export const TextArea = () => {
     const interval = setInterval(async () => {
       try {
         const res = await axios.get(
-          `http://192.168.78.190:5000/result/${task_id}`
+          `https://192.168.78.190:5000/result/${task_id}`
         );
         console.log(res);
         if (res.data.state !== "PENDING") {
