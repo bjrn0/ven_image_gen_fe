@@ -19,7 +19,7 @@ export const TextArea = () => {
     if (selectedPrompt === "") return;
     if (isLoading) return;
     try {
-      const res = await axios.post("https://ai-testing.ventionteams.com:5000/enqueue", {
+      const res = await axios.post("http://ai-testing.ventionteams.com:5000/enqueue", {
         data: {
           prompt: selectedPrompt,
           userId: Date.now(),
